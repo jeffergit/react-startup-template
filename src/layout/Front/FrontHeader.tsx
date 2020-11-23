@@ -11,11 +11,6 @@ export default function FrontHeader() {
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="current" to="/sample-redux">
-            Sample Redux
-          </NavLink>
-        </li>
-        <li>
           <NavLink activeClassName="current" to="/login">
             Login
           </NavLink>

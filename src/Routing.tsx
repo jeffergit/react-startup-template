@@ -8,7 +8,6 @@ import Page404 from "./layout/Page404";
 import PageError from "./layout/PageError";
 
 /**Front */
-import SampleRedux from "./view/SampleRedux/SampleRedux";
 import Home from "./view/Home/Home";
 import Login from "./view/Login/Login";
 /**Admin */
@@ -58,11 +57,6 @@ export default function Routing() {
                 <Switch>
                   <GuardedRoute path="/home" exact component={Home} />
                   <GuardedRoute path="/login" exact component={Login} />
-                  <GuardedRoute
-                    path="/sample-redux"
-                    exact
-                    component={SampleRedux}
-                  />
                   <Redirect exact from="/" to="/home" />
                   <GuardedRoute path="*" exact component={Page404} />
                 </Switch>
