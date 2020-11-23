@@ -7,10 +7,13 @@ import Admin from "./layout/Admin/Admin";
 import Page404 from "./layout/Page404";
 import PageError from "./layout/PageError";
 
-import Sample from "./page/Sample/Sample";
-import Home from "./page/Home/Home";
-import Login from "./page/Login/Login";
-import Dashboard from "./page/Dashboard/Dashboard";
+/**Front */
+import SampleRedux from "./view/SampleRedux/SampleRedux";
+import Home from "./view/Home/Home";
+import Login from "./view/Login/Login";
+/**Admin */
+import Dashboard from "./view/Dashboard/Dashboard";
+import SampleAdminPage from "./view/SampleAdminPage/SampleAdminPage";
 
 export default function Routing() {
   /**
@@ -41,9 +44,9 @@ export default function Routing() {
                     meta={{ role: ["admin"] }}
                   />
                   <GuardedRoute
-                    path="/admin/sample"
+                    path="/admin/sample-admin-page"
                     exact
-                    component={Sample}
+                    component={SampleAdminPage}
                     meta={{ role: ["admin"] }}
                   />
                   <Redirect exact from="/admin" to="/admin/dashboard" />
@@ -55,6 +58,11 @@ export default function Routing() {
                 <Switch>
                   <GuardedRoute path="/home" exact component={Home} />
                   <GuardedRoute path="/login" exact component={Login} />
+                  <GuardedRoute
+                    path="/sample-redux"
+                    exact
+                    component={SampleRedux}
+                  />
                   <Redirect exact from="/" to="/home" />
                   <GuardedRoute path="*" exact component={Page404} />
                 </Switch>

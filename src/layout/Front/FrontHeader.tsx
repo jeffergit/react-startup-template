@@ -4,12 +4,23 @@ import { NavLink } from "react-router-dom";
 export default function FrontHeader() {
   return (
     <div>
-      <NavLink activeClassName="current" to="/home">
-        Home
-      </NavLink>
-      <NavLink activeClassName="current" to="/login">
-        Login
-      </NavLink>
+      <ul>
+        <li>
+          <NavLink activeClassName="current" to="/home">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="current" to="/sample-redux">
+            Sample Redux
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="current" to="/login">
+            Login
+          </NavLink>
+        </li>
+      </ul>
     </div>
   );
 }
