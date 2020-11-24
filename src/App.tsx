@@ -1,6 +1,6 @@
 import React from "react";
 import Routing from "./Routing";
-import "./scss/main.scss";
+import "./style/main.scss";
 
 function App() {
   return (

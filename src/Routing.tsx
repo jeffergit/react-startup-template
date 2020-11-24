@@ -49,6 +49,7 @@ export default function Routing() {
                     meta={{ role: ["admin"] }}
                   />
                   <Redirect exact from="/admin" to="/admin/dashboard" />
+                  <GuardedRoute path="*" exact component={Page404} />
                 </Switch>
               </Admin>
             </GuardedRoute>
