@@ -7,7 +7,7 @@ type Props = {
 
 export default function Admin({ children }: Props) {
   return (
-    <div className="c-admin">
+    <div className="admin">
       <Header />
       {children}
     </div>

@@ -7,7 +7,7 @@ type Props = {
 
 export default function Front({ children }: Props) {
   return (
-    <div className="c-front">
+    <div className="front">
       <FrontHeader />
       {children}
     </div>
